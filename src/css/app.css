@@ -54,41 +54,49 @@ body {
   padding: 0;
   margin: 0; }
 
-.align{
-  display:flex;
-  flex-direction:row;
+.align {
+  display: flex;
+  flex-direction: row; }
 
-}
-.align .orange{
-  margin-top:570px;
-}
-.align .orange #org{
-  padding:0;
-border:none;
-background:none;
-}
-.align .orange #org:hover{
-  cursor:pointer;
-}
+.align .orange {
+   }
+
+.align .orange #org {
+  padding: 0;
+  border: none;
+  background: none; }
+
+.align .orange #org:hover {
+  cursor: pointer; }
 
 .app-messenger {
   display: flex;
   flex-direction: column;
-  border: 3px solid #42e5f4;
+  border: 2px solid #42e5f4;
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
-  border-radius: 10px; }
+  border-radius: 10px;
+    height:424px;
+  width: 304px; 
+margin-top:190px;
+
+animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s; /* Firefox */
+    -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+    -o-animation: fadein 0.3s; /* Opera */}
 
 .app-messenger .header {
-  height: 50px;
+  height: 42px;
   display: flex;
+  border-radius:8px 8px 0px 0px;
   flex-direction: row;
   border-bottom: 1px solid #42e5f4;
-  background-color: #42e5f4; }
+  background-color: #42e5f4;
+ }
 
 .app-messenger .header .sidebar-right {
-  width: 150px; 
-padding-top: 4px;}
+  width: 150px;
+  margin-top:6px; }
 
 .app-messenger .header .sidebar-right .members {
   display: flex;
@@ -97,58 +105,58 @@ padding-top: 4px;}
 .app-messenger .header .sidebar-right .members .member1 {
   padding: 0px auto; }
 
-  .app-messenger .header .sidebar-right .members .member2 {
+.app-messenger .header .sidebar-right .members .member2 {
   padding: 0px auto; }
 
-  .app-messenger .header .sidebar-right .members .member3 {
+.app-messenger .header .sidebar-right .members .member3 {
   padding: 0px auto; }
 
-  .app-messenger .header .sidebar-right .members .member4 {
+.app-messenger .header .sidebar-right .members .member4 {
   padding: 0px auto; }
 
 .app-messenger .header .sidebar-right .members .member4 .user-image {
-  width: 30px; }
+  width: 23px; }
 
-  .app-messenger .header .sidebar-right .members .member1 .user-image {
-  width: 30px; }
+.app-messenger .header .sidebar-right .members .member1 .user-image {
+  width: 23px; }
 
-  .app-messenger .header .sidebar-right .members .member2 .user-image {
-  width: 30px; }
+.app-messenger .header .sidebar-right .members .member2 .user-image {
+  width: 23px; }
 
-  .app-messenger .header .sidebar-right .members .member3 .user-image {
-  width: 30px; }
+.app-messenger .header .sidebar-right .members .member3 .user-image {
+ width: 23px; }
 
 .app-messenger .header .sidebar-right .members .member1 .user-image img {
-  width: 30px;
-  height: 30px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-  position:relative;
-  left:15px;
-  z-index:3; }
-  .app-messenger .header .sidebar-right .members .member2 .user-image img {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  left: 15px;
+  z-index: 3; }
+
+.app-messenger .header .sidebar-right .members .member2 .user-image img {
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-    position:relative;
-    
-  z-index:2;
-  left:2px; }
-  .app-messenger .header .sidebar-right .members .member3 .user-image img {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  z-index: 2;
+  left: 2px; }
+
+.app-messenger .header .sidebar-right .members .member3 .user-image img {
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-   position:relative;
-  
- z-index:1;
- left:-10px; }
-  .app-messenger .header .sidebar-right .members .member4 .user-image img {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  z-index: 1;
+  left: -10px; }
+
+.app-messenger .header .sidebar-right .members .member4 .user-image img {
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-   position:relative;
-   z-index:0;
-   left: -25px; 
-    }
+  position: relative;
+  z-index: 0;
+  left: -25px; }
 
 .app-messenger .header .content {
   display: flex;
@@ -168,12 +176,12 @@ padding-top: 4px;}
 
 .app-messenger .header .content #link {
   text-decoration: none;
-  color: #FFF; }
+  color: #FFF;
+  line-height:42px;
+  font-size:19px;
+  font-weight:bold; }
+
 .app-messenger .header .content h1 {
-  line-height: 50px;
-  font-weight: 600;
-  display: block;
-  text-align: center;
    }
 
 .app-messenger .header .content button {
@@ -226,31 +234,40 @@ padding-top: 4px;}
   flex-grow: 1; }
 
 .app-messenger .main .content .messenger-input {
-  margin: 10px;
+  margin: 0px;
   height: 50px;
+  padding:0px;
   display: flex;
   flex-direction: row; }
 
 .app-messenger .main .content .messenger-input .text-input {
   flex-grow: 1;
-  margin-right: 5px; }
+  margin-left: 9px;
+  margin-bottom:11px; }
 
-.app-messenger .main .content .messenger-input .text-input textarea {
+.app-messenger .main .content .messenger-input .text-input input {
   border: white;
   border-radius: 25px;
   width: 100%;
   height: 100%;
-  padding: 8px 15px; }
+  padding-bottom: 10px;
+  padding-left:20px; 
+padding-top:11px;}
 
 .app-messenger .main .content .messenger-input .text-input .fi-paperclip {
   right: 8px; }
 
-.app-messenger .main .content .messenger-input .actions button.send {
-  background: #2ecc71;
-  color: #FFF;
-  border: 0 none;
-  padding: 7px 15px;
-  line-height: 50px; }
+.app-messenger .main .content .messenger-input .actions  {
+  padding-right:10px;
+  padding-left:5px;
+   }
+   .app-messenger .main .content .messenger-input .actions:hover {
+  cursor:pointer;
+   }
+.app-messenger .main .content .messenger-input .actions img {
+  
+  height:36px;
+  width:36px; }
 
 .messages {
   display: flex;
@@ -380,25 +397,34 @@ h2.title {
 .app-student {
   display: flex;
   flex-direction: column;
-  border: 3px solid #42e5f4;
+  
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
   border-radius: 10px;
-  width:434.11px; }
+  width: 304px; 
+height:424px;
+border: 2px solid #42e5f4;
+margin-top:190px;
+animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s; /* Opera */
+}
 
 .app-student .header {
-  height: 280px;
+  height: 187px;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #42e5f4;
   background-color: #42e5f4; }
 
 .app-student .header .middle {
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-direction: row;
-  padding-top: 25px;
-  font-size: 1.4em; }
+  padding-top: 2px;
+  font-size:15px;
+   }
 
 .app-student .header .middle #good {
   width: 300px;
@@ -412,19 +438,19 @@ h2.title {
   padding-top: 40px; }
 
 .app-student .header .middle #midimg img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; 
-margin-left: 20px;}
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 20px; }
 
 .app-student .header .middle #photomid img {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  margin-right:30px; }
+  margin-right: 30px; }
 
 .app-student .header .middle #photomid {
-  width: 800px;
+  width: 400px;
   text-align: right;
   padding-top: 40px; }
 
@@ -441,7 +467,8 @@ margin-left: 20px;}
   flex-direction: row;
   flex-grow: 1;
   position: relative;
-  justify-content: centre; }
+  justify-content: center;
+  padding-top:4px; }
 
 .app-student .header .content .left-action {
   position: absolute;
@@ -454,11 +481,7 @@ margin-left: 20px;}
   top: 0; }
 
 .app-student .header .content h1 {
-  line-height: 50px;
-  font-weight: 600;
-  display: block;
-  text-align: center;
-  margin-left: 150px; }
+  font-size:19px; }
 
 .app-student .header .content button {
   background: none;
@@ -468,17 +491,19 @@ margin-left: 20px;}
   cursor: pointer; }
 
 .app-student .header .bottom {
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   padding: 0px auto;
-  font-size: 1.4em; }
+  font-size:15px;
+  margin-bottom:65px;
+   }
 
 .app-student .header .bottom #bad {
   width: 200px;
   text-align: left;
-  padding-top: 50px; 
-padding-left: 15px;}
+  padding-top: 50px;
+  padding-left: 5px; }
 
 .app-student .header .bottom #botimg {
   width: 200px;
@@ -486,19 +511,19 @@ padding-left: 15px;}
   padding-top: 40px; }
 
 .app-student .header .bottom #botimg img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  margin-left:20px; }
+  margin-left: 12px; }
 
 .app-student .header .bottom #photobot img {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  margin-right:30px; }
+  margin-right: 30px; }
 
 .app-student .header .bottom #photobot {
-  width: 800px;
+  width: 400px;
   text-align: right;
   padding-top: 40px; }
 
@@ -682,6 +707,43 @@ h2.title {
 
 .toolbar .search-user .user-list .user:hover {
   background: rgba(0, 0, 0, 0.02); }
-*:focus{
-  outline:none;
+
+*:focus {
+  outline: none; }
+
+  @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
