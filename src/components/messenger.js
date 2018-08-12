@@ -26,9 +26,10 @@ constructor(props){
 
 		this.state = {
 			height: window.innerHeight,
-			newMessage: 'Hello there...',
+			newMessage: '',
 			searchUser: "",
 			showSearchUser: false,
+			isExpanded:false
 		}
 
 		this._onResize = this._onResize.bind(this);
@@ -177,7 +178,14 @@ constructor(props){
 		window.removeEventListener('resize', this._onResize)
 
 	}
-
+    
+    handletoggle(e){
+    	e.preventDefault();
+    	this.setState({
+    		isExpanded:!this.state.isExpanded
+    	})
+    	//console.log(this.state.isExpanded);
+    }
 
 	    messenger() {
   const {store} = this.props;
@@ -197,7 +205,7 @@ constructor(props){
 
 
 		return (
-				<div style={style} className="app-messenger">
+				<div   className="app-messenger">
 					<div className="header">
 						<div className="sidebar-right">
 
@@ -230,13 +238,13 @@ constructor(props){
 						</div>
 						
 						<div className="content">
-						 <centre> <Link to="/students" id="link"><h1>Chemistry</h1></Link></centre>
+						 <centre> <Link to="/students" id="link">Chemistry</Link></centre>
 						</div>
 						<div className="right">
 							<div className="user-bar">
-								<div className="profile-name">Prakarsh
+								<div className="profile-name">
 								</div>
-								<div className="profile-image"><img src={avatar} alt="" />
+								<div className="profile-image">
 								</div>
 							</div>
 
@@ -277,7 +285,7 @@ constructor(props){
 							 <div className="messenger-input">
 
 									<div className="text-input">
-										<textarea onKeyUp={(event) => {
+										<input onKeyUp={(event) => {
 
 
 											if(event.key === 'Enter' && !event.shiftKey){
@@ -298,7 +306,7 @@ constructor(props){
 									</div>
 									
 									<div className="actions">
-										<img src={arrow} alt="sending.." onClick={this.handleSend} className="send"/>
+										<img src={arrow} alt="sending.." onClick={this.handleSend} />
 									</div>
 							</div> 
 
@@ -326,7 +334,7 @@ Student(){
   return(
   <div>
   
-  	<div style={style} className="app-student">
+  	<div  className="app-student">
 		<div className="header">
 			<div className="content">
 				<h1>STUDENTS</h1>
@@ -359,19 +367,22 @@ Student(){
   render() {
     return (
       <div className="align">
-			<div className="orange">
-        		<Link to="/messenger">
-        		<button id="org" onClick={this._onCreateChannel}>
-        		<svg height="100" width="100">
-  					<circle cx="50" cy="50" r="40"   fill="orange" />
+			<div className="orange" onClick={(e)=> this.handletoggle(e)}>
+			
+				
+				<Link to="/messenger">
+        		
+        		<svg height="662" width="80" onClick={this._onCreateChannel}>
+  					<circle cx="50" cy="610" r="25"   fill="orange" />
 				</svg>
-				</button>
+				
 				</Link>
+        		
 			</div>
 
           
            
-           <Route path="/messenger" component={this.messenger}/>
+          {this.state.isExpanded && <Route path="/messenger" component={this.messenger}/>} 
            <Route path="/students" component={this.Student}/>
 
       </div>
