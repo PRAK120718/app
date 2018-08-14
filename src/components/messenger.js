@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import avatar from '../images/avatar.png'
 import arrow from '../images/arrow.png'
 import call from '../images/call.png'
+import clip from '../images/paperclip.png'
 import {OrderedMap} from 'immutable'
 import _ from 'lodash'
 import {ObjectID} from '../helpers/objectid'
@@ -215,19 +216,23 @@ constructor(props){
                               
 							
 								<div className="member1">
-                               		<div className="user-image"><img src="https://api.adorable.io/avatars/100/abott@srishti.png" alt=".."/>
+                               		<div className="user-image">
                                		</div>
                                 </div>
                                 <div className="member2">
-                                	<div className="user-image" ><img src="https://api.adorable.io/avatars/100/abott@Akash.png" alt=".."/>
+                                	<div className="user-image" >
                                 	</div>
                                </div>
                                <div className="member3">
-                                	<div className="user-image"><img src="https://api.adorable.io/avatars/100/abott@Piyush.png" alt=".."/>
+                                	<div className="user-image">
                                 	</div>
                                </div>
                                <div className="member4">
-                               		<div className="user-image"><img src="https://api.adorable.io/avatars/100/abott@Prakarsh.png" alt=".."/>
+                               		<div className="user-image">
+                               		</div>
+                               	</div>
+                               	<div className="member5">
+                               		<div className="user-image">
                                		</div>
                                	</div>
                                
@@ -262,10 +267,10 @@ constructor(props){
 									return (
 											<div key={index} className={classNames('message', {'me': message.me})}>
 												<div className="message-user-image">
-													<img src={message.avatar} alt="" />
+													
 												</div>
 												<div className="message-body">
-													<div className="message-author">{message.me ? 'You ' : message.author} say:</div>
+													
 													<div className="message-text">
 													{this.renderMessage(message)}
 													</div>
@@ -285,7 +290,7 @@ constructor(props){
 							 <div className="messenger-input">
 
 									<div className="text-input">
-										<input onKeyUp={(event) => {
+										<textarea onKeyUp={(event) => {
 
 
 											if(event.key === 'Enter' && !event.shiftKey){
@@ -301,8 +306,9 @@ constructor(props){
 
 												this.setState({newMessage: _.get(event, 'target.value')});
 
-										}} value={this.state.newMessage} placeholder="Write your messsage..." />
-										<i className="fi-paperclip"></i>
+										}} value={this.state.newMessage} placeholder="Write your messsage...    " />
+										<img src={clip}/>
+										
 									</div>
 									
 									<div className="actions">
@@ -341,7 +347,8 @@ Student(){
 			</div>
 			<div className="middle">
 				<div id="midimg">
-					<img src={avatar} alt=""/>
+					
+					<h2>SV</h2>
 				</div>
 				<div id="good">Sai Varun
 				</div>
@@ -351,7 +358,8 @@ Student(){
 						
 						
 			<div className="bottom">
-				<div id="botimg"><img src={avatar} alt="" />
+				<div id="botimg">
+				<h2>AK</h2>
 				</div>
 				<div id="bad">Akash
 				</div>
